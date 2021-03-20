@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+  /*  color: lightgreen; */
+}
+body {
+  background-color: #333;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background {
+  position: relative;
+}
+.drumImg {
+  width: 740px;
+  height: 740px;
+}
+.kick {
+  /*   border: 1px solid lightblue; */
+  border-radius: 50%;
+  width: 130px;
+  height: 150px;
+  position: absolute;
+  top: 400px;
+  left: 370px;
+}
+.snare {
+  /*  border: 1px solid tomato; */
+  border-radius: 50%;
+  width: 133px;
+  height: 145px;
+  position: absolute;
+  top: 410px;
+  left: 229px;
+}
+.hh {
+  /*  border: 1px solid lightgreen; */
+  border-radius: 50%;
+  width: 170px;
+  height: 120px;
+  position: absolute;
+  top: 305px;
+  left: 30px;
+}
+.tom1 {
+  /*   border: 1px solid lightgreen; */
+  border-radius: 50%;
+  width: 105px;
+  height: 100px;
+  position: absolute;
+  top: 306px;
+  left: 330px;
+}
+.tom2 {
+  /*   border: 1px solid lightgreen; */
+  border-radius: 50%;
+  width: 105px;
+  height: 100px;
+  position: absolute;
+  top: 316px;
+  left: 450px;
+}
+.tom3 {
+  /*   border: 1px solid lightgreen; */
+  border-radius: 50%;
+  width: 115px;
+  height: 110px;
+  position: absolute;
+  top: 428px;
+  left: 510px;
+}
+.crash {
+  /*  border: 1px solid lightgreen; */
+  border-radius: 50%;
+  width: 145px;
+  height: 120px;
+  position: absolute;
+  top: 128px;
+  left: 220px;
+}
+.ride {
+  /*  border: 1px solid lightgreen; */
+  border-radius: 50%;
+  width: 145px;
+  height: 120px;
+  position: absolute;
+  top: 140px;
+  left: 510px;
+}
+@media screen and (max-width: 420px) {
+  .drumImg {
+    width: 360px;
+    height: 360px;
+  }
+  .kick {
+    /*    border: 1px solid lightblue; */
+    border-radius: 50%;
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top: 195px;
+    left: 180px;
+  }
+  .snare {
+    /*  border: 1px solid tomato; */
+    border-radius: 50%;
+    width: 65px;
+    height: 64px;
+    position: absolute;
+    top: 200px;
+    left: 110px;
+  }
+  .hh {
+    /*    border: 1px solid lightgreen; */
+    border-radius: 50%;
+    width: 82px;
+    height: 70px;
+    position: absolute;
+    top: 140px;
+    left: 13px;
+  }
+  .tom1 {
+    /*    border: 1px solid lightgreen; */
+    border-radius: 50%;
+    width: 50px;
+    height: 45px;
+    position: absolute;
+    top: 150px;
+    left: 160px;
+  }
+  .tom2 {
+    /*     border: 1px solid lightgreen; */
+    border-radius: 50%;
+    width: 50px;
+    height: 45px;
+    position: absolute;
+    top: 153px;
+    left: 220px;
+  }
+  .tom3 {
+    /*    border: 1px solid lightgreen; */
+    border-radius: 50%;
+    width: 51px;
+    height: 55px;
+    position: absolute;
+    top: 210px;
+    left: 250px;
+  }
+  .crash {
+    /*   border: 1px solid lightgreen; */
+    border-radius: 50%;
+    width: 80px;
+    height: 48px;
+    position: absolute;
+    top: 70px;
+    left: 100px;
+  }
+  .ride {
+    /*   border: 1px solid lightgreen; */
+    border-radius: 50%;
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    top: 73px;
+    left: 245px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .drumImg {
+    width: 740px;
+    height: 740px;
+  }
+}
+
+@keyframes splash {
+  from {
+    transform: scale(1.2);
+    background-color: lightgray;
+  }
+  to {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}
+@keyframes unsplash {
+  from {
+    transform: scale(1.2);
+    background-color: lightgray;
+  }
+  to {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}
+.drum.rehit {
+  animation: unsplash 0.1s ease;
+}
+
+.drum.hit {
+  animation: splash 0.1s ease;
+}
